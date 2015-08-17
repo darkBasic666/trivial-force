@@ -1,2 +1,2 @@
 # trivial-force
-ACM Algoritms 
+ACM Algorithms 

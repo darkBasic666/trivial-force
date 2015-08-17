@@ -1,16 +1,17 @@
-map < char , set<char> > g;
+map < T , set<T> > g;
 // Herramientas para el dfs
 int t = 0;
-map  < char , int > d;
-map  < char , int > f;
+map  < T , int > d;
+map  < T , int > f;
 
 bool hayCiclo = false;
 
-void dfs(char u){
+template <typename T>
+void dfs(T u){
 	t++;
 	d[u] = t;
-	for (set<char>::iterator it=g[u].begin(); it!=g[u].end(); ++it){
-		char v = *it;
+	for (set<T>::iterator it=g[u].begin(); it!=g[u].end(); ++it){
+		T v = *it;
 		if (d[v] == -1){
 			dfs(v);
 		}else{
